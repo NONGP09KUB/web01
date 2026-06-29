@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        let fruits = ['Apple','Banana','Mango','Orange'];
+        // document.write("<p>" + fruits[0] + "</p>");
+        // document.write("<p>" + fruits[1] + "</p>");
+        // document.write("<p>" + fruits[2] + "</p>");
+        // document.write("<p>" + fruits[3] + "</p>");
+        let price = [10, 20, 30, 40];
+        let count = [5, 10, 15, 20];
+        let sum = 0;
+        let total = 0;
+        document.write("<table border=1>");
+        document.write("<tr> <th>Picture </th>   <th>Fruit</th>  <th>Price</th>  <th>Count</th>  <th>Total</th>  </tr>");
+        for (let i = 0; i < fruits.length; i++) {
+            document.write("<tr> <td> <img src='https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTnKjJ8SrzH_50x7BoF1Y7oYQn5HNrE2l4N68h8UvWuMKvoePE2qfctTqpTFzWY-Y5nFWek7cAfrjKl_6Pu6jjVLDw-SEQ_6cnyBjxJRfs' width='100' height='100'> </td> <td>" + fruits[i] + "</td><td>" + price[i] + "</td><td>" + count[i] + "</td><td>" + (price[i] * count[i]) + "</td></tr> ");
+            total = price[i] * count[i];
+            sum += total;   
+        }
+        document.write("</table>");
+        document.write("<p>Total sum: " + sum + "</p>");
+        
+
+       </script> 
+</body>
+</html>

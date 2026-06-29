@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+</head>
+<body>
+    <header>
+        <h1>Work Shop</h1>
+    </header>
+    <main>
+        <p id="result"></p>
+    </main>
+    <footer>
+
+    </footer>
+    <hr>
+    <script>
+       let student = 'PP' , midterm = 99 , final  = 55 , sum , avg , grade; 
+        sum = midterm + final;
+        grade = null;
+        if (sum >= 80) {
+            grade = 'A';
+        } 
+        else if (sum >= 60){
+            grade = 'B';
+        }
+        else if (sum >= 30){
+            grade = 'C';
+        }
+        else {
+            grade = 'D';
+        }
+        avg = sum / 2;
+        document.write("Name:",student,"Grade:",grade,"Point:",sum);
+    </script>
+    <script src="scrip.js" ></script>
+</body
+</html>
