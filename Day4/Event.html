@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">Click Me</button>
+    <input type="text" id="name" alt="Enter your name" placeholder="Enter your name">
+    <input type="email" id="email" alt="Enter your mail" placeholder="Enter your mail">
+    <input type="password" id="password" alt="Enter your password" placeholder="Enter your password">
+    
+
+    <p id="show"></p>
+
+    
+    <script>
+        const button1 = document.querySelector("#btn1"); // Select the button element with ID "btn1"
+        const Unameinput = document.querySelector("#name"); // Select the input element with ID "name"
+        const showmess = document.getElementById("show"); // Select the <p> element with ID "show"
+         Unameinput.addEventListener("input", () => {
+            
+            showmess.textContent = "Hello, " + Unameinput.value + "!"; // Update the <p> element's text content with the input value
+        });
+        // Add an event listener to the button for the "click" event
+        button1.addEventListener("click", function() {
+            alert("Button Clicked!");
+        });
+        // Add an event listener to the button for the "mouseover" event    
+        button1.addEventListener("mouseover", () => {
+            button1.style.backgroundColor = "green"; // Change background color on mouseover
+        });
+        // Add an event listener to the button for the "mouseout" event    
+        button1.addEventListener("mouseout", () => {
+            button1.style.backgroundColor = ""; // Change background color on mouseout
+        });
+
+        const emailInput = document.getElementById("email");
+        emailInput.addEventListener("input", () => {
+         
+            if (emailInput.value.includes("@")) {
+                showmess.textContent = "Correct Email";
+            } else {
+                showmess.textContent = "Email ต้องมี @ ";
+            }
+        });
+
+        const pw1 = document.getElementById("password");
+        pw1.addEventListener("input",() => {
+           
+            if (pw1.value.length < 8 ) {
+                showmess.textContent = "อักษร 8 ตัว";
+            } else {
+                showmess.textContent = "ไม่ถูก " + pw1.value.length;
+            }
+        });
+
+
+       
+    </script>
+</body>
+</html>

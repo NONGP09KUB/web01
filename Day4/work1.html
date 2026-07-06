@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <button id="btn1">blue</button>
+        <button id="btn2">red</button>
+        <button id="btn3">green</button>
+        <button id="btn4">yellow</button>
+        
+        <script>
+           const button1 = document.querySelector("#btn1");
+           const button2 = document.querySelector("#btn2");
+           const button3 = document.querySelector("#btn3");
+           const button4 = document.querySelector("#btn4");
+
+           button1.addEventListener("click", () => {
+                document.body.style.backgroundColor = "blue";
+            });
+
+           button2.addEventListener("click", () => {
+                document.body.style.backgroundColor = "red";
+            });
+
+           button3.addEventListener("click", () => {
+                document.body.style.backgroundColor = "green";
+            });
+
+            button4.addEventListener("click", ()=>{
+                document.body.style.backgroundColor = "yellow";
+            });
+
+
+
+
+
+
+
+
+        </script>
+
+</body>
+</html>

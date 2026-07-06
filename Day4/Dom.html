@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> มหาลัย </h1>
+    <p id="major"> I am learn in Com-sci </p>
+    <p id="major1">Welcom2</p>
+    <p id="major2">Welcom3</p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <img src="https://randomwordgenerator.com/img/picture-generator/54e7dc4a4a56ac14f1dc8460962e33791c3ad6e04e507441722a72d39f4fcc_640.jpg" alt="">
+    <script> 
+        // === Example 1: getElementById and textContent vs innerHTML ===
+        // getElementById("major") - selects element by its ID attribute
+        const element1 = document.getElementById("major");
+        
+        // textContent - only sets/gets plain text (no HTML tags)
+        element1.textContent = "Computer science";
+        
+        // innerHTML - can set/get HTML content with tags (renders the tags)
+        // Use innerHTML when you want to insert HTML tags, textContent for plain text only
+        element1.innerHTML = "<Strong>Computer science</Strong>"; // If you want to insert HTML tags, you must use innerHTML
+
+
+        // === Example 2: querySelector and += operator ===
+        // querySelector("#major1") - selects first element matching CSS selector
+        const element2 = document.querySelector("#major1");
+        
+        // += means "add to existing content" (concatenate strings)
+        // element2's content becomes "Welcom2" + "NPRU" = "Welcom2NPRU"
+        element2.textContent += "NPRU";
+
+
+        // === Example 3: querySelectorAll and array manipulation ===
+        // querySelectorAll("p") - selects ALL <p> elements as a NodeList (array-like)
+        const element3 = document.querySelectorAll("p");
+        
+        // Access element by index [4] - gets the 5th <p> tag (index starts at 0)
+        // This sets only that one element's content to "001"
+        element3[4].textContent = "001"; // Modify one element at a time
+        
+        // forEach - loops through ALL elements in the NodeList
+        // After this loop, ALL <p> elements will have textContent = "002"
+        element3.forEach((element) => {
+            element.textContent = "002";
+
+            element.style.color = "red"; // Change text color to red
+            element.style.fontSize = "20px"; // Change font size to 20px
+        })
+
+        const imgElement = document.querySelector("img");
+        imgElement.style.width = "300px"; // Change image width to 300px
+        imgElement.style.height = "200px"; // Change image height to 200px  
+        // imgElement.setAttribute("height", "200px"); // Set height attribute to 200px
+    
+        const newElement = document.createElement("h2"); // Create a new <h2> element
+        newElement.textContent = "New Element"; // Set its text content
+        document.body.appendChild(newElement); // Append the new element to the body
+        // newElement.remove(); // Remove the new element from the DOM
+      
+
+
+
+
+        
+    </script>
+</body>
+</html>

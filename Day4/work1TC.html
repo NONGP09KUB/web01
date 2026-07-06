@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>red</button>
+    <button>blue</button>
+    <button>green</button>
+
+    <script>
+        const btns = document.querySelectorAll("button");
+
+        btns.forEach(btns =>{
+            btns,addEventListener("click" ,() => {
+                document.body.style.backgroundColor = btns.textContent.trim();
+            })
+        })
+    </script>
+</body>
+</html>
